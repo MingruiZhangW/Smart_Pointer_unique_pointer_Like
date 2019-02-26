@@ -81,7 +81,7 @@ public:
 	}
 	bool isNull() const { return m_ptr == nullptr; }
 
-	friend std::ostream& operator<< (std::ostream &out, const Mysmart_ptr ptr) {
+	friend std::ostream& operator<< (std::ostream &out, const Mysmart_ptr &ptr) {
 	
 		out << *(ptr.m_ptr) << std::endl;
 		return out;
