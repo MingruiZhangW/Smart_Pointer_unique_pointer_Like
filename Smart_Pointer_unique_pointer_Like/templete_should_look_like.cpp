@@ -1,4 +1,4 @@
-#include "Smart_ptr_Ming.h"
+/*include "Smart_ptr_Ming.h"
 
 template <typename T>
 Mysmart_ptr<T>::Mysmart_ptr() : m_ptr(nullptr){}
@@ -23,6 +23,8 @@ Mysmart_ptr<T>& Mysmart_ptr<T>::operator=(Mysmart_ptr<T> &&ptr) {
 	m_ptr = ptr;
 	ptr = nullptr;
 
+	return *this;
+
 }
 
 template <typename T>
@@ -46,3 +48,4 @@ Mysmart_ptr<T>::~Mysmart_ptr() {
 	delete m_ptr;
 
 }
+*/

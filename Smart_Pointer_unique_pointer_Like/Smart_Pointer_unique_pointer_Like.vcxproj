@@ -116,7 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Smart_ptr_Ming.cpp" />
+    <ClCompile Include="templete_should_look_like.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Smart_ptr_Ming.h" />

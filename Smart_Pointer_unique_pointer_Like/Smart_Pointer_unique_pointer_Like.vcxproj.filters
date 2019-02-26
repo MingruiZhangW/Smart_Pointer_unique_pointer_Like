@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Smart_ptr_Ming.cpp">
+    <ClCompile Include="templete_should_look_like.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
