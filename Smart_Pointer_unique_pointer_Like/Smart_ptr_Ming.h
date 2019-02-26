@@ -15,6 +15,16 @@ public:
 	//Copy constructor delete
 	Mysmart_ptr(Mysmart_ptr &ptr) = delete;
 
+	//Copy constructor should look like
+	/*
+	Mysmart_ptr(Mysmart_ptr &ptr){
+	
+		m_ptr = new T;
+		*m_ptr = *(ptr.m_ptr);
+	
+	}
+	*/
+
 	//move constructor
 	Mysmart_ptr(Mysmart_ptr &&ptr) : m_ptr(ptr.m_ptr) {
 
@@ -24,6 +34,20 @@ public:
 
 	// Copy assignment delete
 	Mysmart_ptr& operator=(Mysmart_ptr &ptr) = delete;
+
+	//Copy assignment should look like
+	/*
+	Mysmart_ptr& operator=(Mysmart_ptr &ptr){
+	
+		if(&ptr = this){ return *this; }	
+		delete m_ptr;
+
+		m_ptr = new T;
+		*m_ptr = *(ptr.m_ptr);
+		return *this;
+
+	}
+	*/
 
 	//move assignment operator
 	Mysmart_ptr& operator=(Mysmart_ptr &&ptr) {
@@ -55,10 +79,17 @@ public:
 		delete m_ptr;
 
 	}
+	bool isNull() const { return m_ptr == nullptr; }
+
+	friend std::ostream& operator<< (std::ostream &out, const Mysmart_ptr ptr) {
+	
+		out << *(ptr.m_ptr) << std::endl;
+		return out;
+
+	}
 
 private:
 	T *m_ptr;
 };
-
 
 #endif
