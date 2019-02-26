@@ -32,8 +32,8 @@ public:
 
 		delete m_ptr;
 
-		m_ptr = ptr;
-		ptr = nullptr;
+		m_ptr = ptr.m_ptr;
+		ptr.m_ptr = nullptr;
 
 		return *this;
 
